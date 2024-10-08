@@ -89,6 +89,12 @@ pub type SignedExtra = (
 	frame_metadata_hash_extension::CheckMetadataHash<Runtime>,
 );
 
+/// Pallet contracts
+const CONTRACTS_DEBUG_OUTPUT: pallet_contracts::DebugInfo =
+    pallet_contracts::DebugInfo::UnsafeDebug;
+const CONTRACTS_EVENTS: pallet_contracts::CollectEvents =
+    pallet_contracts::CollectEvents::UnsafeCollect;
+
 /// Unchecked extrinsic type as expected by this runtime.
 pub type UncheckedExtrinsic =
 	generic::UncheckedExtrinsic<Address, RuntimeCall, Signature, SignedExtra>;
@@ -300,8 +306,10 @@ mod runtime {
 	pub type MessageQueue = pallet_message_queue;
 	
 	// Xode
-	#[runtime::pallet_index(39)]
+	#[runtime::pallet_index(40)]
 	pub type Assets = pallet_assets;
+    #[runtime::pallet_index(41)]
+    pub type Contracts = pallet_contracts::Pallet<Runtime>;
 
 	// Template
 	#[runtime::pallet_index(50)]

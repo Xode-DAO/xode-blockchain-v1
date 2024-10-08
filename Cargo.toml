@@ -112,3 +112,6 @@ xcm-executor = { version = "16.0.0", default-features = false, package = "stagin
 substrate-wasm-builder = { version = "24.0.0", default-features = false }
 
 pallet-assets = { version = "39.0.0", default-features = false }
+
+sp-std = { version = "14.0.0", default-features = false }
+pallet-contracts = { version = "37.0.0", default-features = false }
