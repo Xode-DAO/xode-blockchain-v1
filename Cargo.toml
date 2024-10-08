@@ -110,3 +110,5 @@ sp-version = { version = "37.0.0", default-features = false }
 xcm-builder = { version = "16.0.0", default-features = false, package = "staging-xcm-builder" }
 xcm-executor = { version = "16.0.0", default-features = false, package = "staging-xcm-executor" }
 substrate-wasm-builder = { version = "24.0.0", default-features = false }
+
+pallet-assets = { version = "39.0.0", default-features = false }

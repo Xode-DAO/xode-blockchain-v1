@@ -74,6 +74,7 @@ cumulus-primitives-storage-weight-reclaim.workspace = true
 pallet-collator-selection.workspace = true
 parachains-common.workspace = true
 parachain-info.workspace = true
+pallet-assets.workspace = true
 
 [features]
 default = ["std"]
@@ -129,6 +130,7 @@ std = [
 	"xcm-builder/std",
 	"xcm-executor/std",
 	"xcm/std",
+	"pallet-assets/std",
 ]
 
 runtime-benchmarks = [
@@ -155,6 +157,7 @@ runtime-benchmarks = [
 	"sp-runtime/runtime-benchmarks",
 	"xcm-builder/runtime-benchmarks",
 	"xcm-executor/runtime-benchmarks",
+	"pallet-assets/runtime-benchmarks",
 ]
 
 try-runtime = [
@@ -180,6 +183,7 @@ try-runtime = [
 	"parachain-info/try-runtime",
 	"polkadot-runtime-common/try-runtime",
 	"sp-runtime/try-runtime",
+	"pallet-assets/try-runtime",
 ]
 
 # Enable the metadata hash generation.

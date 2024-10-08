@@ -298,6 +298,10 @@ mod runtime {
 	pub type CumulusXcm = cumulus_pallet_xcm;
 	#[runtime::pallet_index(33)]
 	pub type MessageQueue = pallet_message_queue;
+	
+	// Xode
+	#[runtime::pallet_index(39)]
+	pub type Assets = pallet_assets;
 
 	// Template
 	#[runtime::pallet_index(50)]
