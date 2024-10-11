@@ -115,3 +115,12 @@ pallet-assets = { version = "39.0.0", default-features = false }
 
 sp-std = { version = "14.0.0", default-features = false }
 pallet-contracts = { version = "37.0.0", default-features = false }
+
+pallet-asset-rate = { version = "16.0.0", default-features = false }
+pallet-indices = { version = "37.0.0", default-features = false }
+pallet-collective = { version = "37.0.0", default-features = false }
+pallet-treasury= { version = "36.0.1", default-features = false }
+
+pallet-staking-reward-curve= { version = "12.0.0", default-features = false }
+pallet-staking= { version = "37.0.0", default-features = false }
+pallet-babe= { version = "37.0.0", default-features = false }

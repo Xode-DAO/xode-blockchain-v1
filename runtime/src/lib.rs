@@ -307,9 +307,17 @@ mod runtime {
 	
 	// Xode
 	#[runtime::pallet_index(40)]
-	pub type Assets = pallet_assets;
+	pub type Assets = pallet_assets::Pallet<Runtime>;
     #[runtime::pallet_index(41)]
     pub type Contracts = pallet_contracts::Pallet<Runtime>;
+	#[runtime::pallet_index(42)]
+	pub type Indices = pallet_indices::Pallet<Runtime>;
+	#[runtime::pallet_index(43)]
+	pub type AssetRate = pallet_asset_rate::Pallet<Runtime>;
+	#[runtime::pallet_index(44)]
+	pub type Council = pallet_collective::Pallet<Runtime, Instance1>;
+	#[runtime::pallet_index(45)]
+	pub type Treasury = pallet_treasury::Pallet<Runtime>;
 
 	// Template
 	#[runtime::pallet_index(50)]

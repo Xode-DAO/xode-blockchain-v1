@@ -80,6 +80,15 @@ pallet-assets.workspace = true
 sp-std.workspace = true
 pallet-contracts.workspace = true
 
+pallet-indices.workspace = true
+pallet-asset-rate.workspace = true
+pallet-collective.workspace = true
+pallet-treasury.workspace = true
+
+pallet-staking-reward-curve.workspace = true
+pallet-staking.workspace = true
+pallet-babe.workspace = true
+
 [features]
 default = ["std"]
 std = [
@@ -137,6 +146,10 @@ std = [
 	"xcm/std",
 	"pallet-assets/std",
 	"pallet-contracts/std",
+	"pallet-collective/std",
+	"pallet-treasury/std",
+    "pallet-staking/std",
+	"pallet-babe/std",
 ]
 
 runtime-benchmarks = [
@@ -165,6 +178,10 @@ runtime-benchmarks = [
 	"xcm-executor/runtime-benchmarks",
 	"pallet-assets/runtime-benchmarks",
 	"pallet-contracts/runtime-benchmarks",
+	"pallet-collective/runtime-benchmarks",
+	"pallet-treasury/runtime-benchmarks",
+	"pallet-staking/runtime-benchmarks",
+	"pallet-babe/runtime-benchmarks",
 ]
 
 try-runtime = [
@@ -192,6 +209,10 @@ try-runtime = [
 	"sp-runtime/try-runtime",
 	"pallet-assets/try-runtime",
 	"pallet-contracts/try-runtime",
+	"pallet-collective/try-runtime",
+	"pallet-treasury/try-runtime",
+	"pallet-staking/try-runtime",
+	"pallet-babe/try-runtime",
 ]
 
 # Enable the metadata hash generation.
