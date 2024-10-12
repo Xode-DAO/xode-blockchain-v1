@@ -27,7 +27,7 @@ scale-info = { features = [
 ], workspace = true }
 smallvec = { workspace = true, default-features = true }
 docify = { workspace = true }
-pallet-parachain-template.workspace = true
+pallet-xode-staking.workspace = true
 frame-benchmarking = { optional = true, workspace = true }
 frame-executive.workspace = true
 frame-metadata-hash-extension.workspace = true
@@ -85,8 +85,6 @@ pallet-asset-rate.workspace = true
 pallet-collective.workspace = true
 pallet-treasury.workspace = true
 
-pallet-staking-reward-curve.workspace = true
-pallet-staking.workspace = true
 pallet-babe.workspace = true
 
 [features]
@@ -116,7 +114,7 @@ std = [
 	"pallet-balances/std",
 	"pallet-collator-selection/std",
 	"pallet-message-queue/std",
-	"pallet-parachain-template/std",
+	"pallet-xode-staking/std",
 	"pallet-session/std",
 	"pallet-sudo/std",
 	"pallet-timestamp/std",
@@ -148,7 +146,6 @@ std = [
 	"pallet-contracts/std",
 	"pallet-collective/std",
 	"pallet-treasury/std",
-    "pallet-staking/std",
 	"pallet-babe/std",
 ]
 
@@ -166,7 +163,7 @@ runtime-benchmarks = [
 	"pallet-balances/runtime-benchmarks",
 	"pallet-collator-selection/runtime-benchmarks",
 	"pallet-message-queue/runtime-benchmarks",
-	"pallet-parachain-template/runtime-benchmarks",
+	"pallet-xode-staking/runtime-benchmarks",
 	"pallet-sudo/runtime-benchmarks",
 	"pallet-timestamp/runtime-benchmarks",
 	"pallet-xcm/runtime-benchmarks",
@@ -180,7 +177,6 @@ runtime-benchmarks = [
 	"pallet-contracts/runtime-benchmarks",
 	"pallet-collective/runtime-benchmarks",
 	"pallet-treasury/runtime-benchmarks",
-	"pallet-staking/runtime-benchmarks",
 	"pallet-babe/runtime-benchmarks",
 ]
 
@@ -198,7 +194,7 @@ try-runtime = [
 	"pallet-balances/try-runtime",
 	"pallet-collator-selection/try-runtime",
 	"pallet-message-queue/try-runtime",
-	"pallet-parachain-template/try-runtime",
+	"pallet-xode-staking/try-runtime",
 	"pallet-session/try-runtime",
 	"pallet-sudo/try-runtime",
 	"pallet-timestamp/try-runtime",
@@ -211,7 +207,6 @@ try-runtime = [
 	"pallet-contracts/try-runtime",
 	"pallet-collective/try-runtime",
 	"pallet-treasury/try-runtime",
-	"pallet-staking/try-runtime",
 	"pallet-babe/try-runtime",
 ]
 

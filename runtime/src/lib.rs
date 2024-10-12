@@ -37,8 +37,8 @@ pub use sp_runtime::BuildStorage;
 
 use weights::ExtrinsicBaseWeight;
 
-/// Import the template pallet.
-pub use pallet_parachain_template;
+/// Import the xode staking pallet.
+pub use pallet_xode_staking;
 
 /// Alias to 512-bit hash when used in the context of a transaction signature on the chain.
 pub type Signature = MultiSignature;
@@ -319,9 +319,9 @@ mod runtime {
 	#[runtime::pallet_index(45)]
 	pub type Treasury = pallet_treasury::Pallet<Runtime>;
 
-	// Template
+	// Xode Staking
 	#[runtime::pallet_index(50)]
-	pub type TemplatePallet = pallet_parachain_template;
+	pub type XodeStakingPallet = pallet_xode_staking;
 }
 
 #[docify::export(register_validate_block)]

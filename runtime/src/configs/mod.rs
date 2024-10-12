@@ -67,8 +67,7 @@ use super::{
 	MessageQueue, Nonce, PalletInfo, ParachainSystem, Runtime, RuntimeCall, RuntimeEvent,
 	RuntimeFreezeReason, RuntimeHoldReason, RuntimeOrigin, RuntimeTask, Session, SessionKeys,
 	System, WeightToFee, XcmpQueue, AVERAGE_ON_INITIALIZE_RATIO, EXISTENTIAL_DEPOSIT, HOURS,
-	DAYS,
-	MAXIMUM_BLOCK_WEIGHT, MICROUNIT, NORMAL_DISPATCH_RATIO, SLOT_DURATION, VERSION,
+	DAYS, MAXIMUM_BLOCK_WEIGHT, MICROUNIT, NORMAL_DISPATCH_RATIO, SLOT_DURATION, VERSION,
 };
 use xcm_config::{RelayLocation, XcmOriginToTransactDispatchOrigin};
 
@@ -323,13 +322,15 @@ impl pallet_collator_selection::Config for Runtime {
 	type WeightInfo = ();
 }
 
-/// Configure the pallet template in pallets/template.
-impl pallet_parachain_template::Config for Runtime {
+/// Configure the pallet xode staking in pallets/xode-staking.
+impl pallet_xode_staking::Config for Runtime {
 	type RuntimeEvent = RuntimeEvent;
-	type WeightInfo = pallet_parachain_template::weights::SubstrateWeight<Runtime>;
+	type WeightInfo = pallet_xode_staking::weights::SubstrateWeight<Runtime>;
 }
 
 /// Xode Blockchain: Configure the pallet assets
+/// 
+/// 
 pub const ASSETS_UNIT: Balance = 1_000_000_000_000;
 pub const ASSETS_MILLIUNIT: Balance = 1_000_000_000;
 pub const ASSETS_MICROUNIT: Balance = 1_000_000;
@@ -372,6 +373,8 @@ impl pallet_assets::Config for Runtime {
 }
 
 /// Xode Blockchain: Configure the pallet contracts
+///  - Assets
+///  - Contracts
 pub struct DummyRandomness<T: pallet_contracts::Config>(sp_std::marker::PhantomData<T>);
 
 impl<T: pallet_contracts::Config> Randomness<T::Hash, BlockNumberFor<T>> for DummyRandomness<T> {
@@ -450,12 +453,10 @@ impl pallet_contracts::Config for Runtime {
 }
 
 /// Xode Blockchain: Configure the pallet treasury
-pub type Moment = u64;
+///  - Collective / Committee
+///  - Treasury
 pub type AccountIndex = u32;
 
-pub const MILLISECS_PER_BLOCK: Moment = 3000;
-pub const SECS_PER_BLOCK: Moment = MILLISECS_PER_BLOCK / 1000;
-pub const MINUTES: BlockNumber = 60 / (SECS_PER_BLOCK as BlockNumber);
 pub const MILLICENTS: Balance = 1_000_000_000;
 pub const CENTS: Balance = 1_000 * MILLICENTS; 
 pub const DOLLARS: Balance = 100 * CENTS;
@@ -544,4 +545,3 @@ impl pallet_treasury::Config for Runtime {
 	#[cfg(feature = "runtime-benchmarks")]
 	type BenchmarkHelper = ();
 }
-

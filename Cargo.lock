@@ -7008,20 +7008,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "pallet-parachain-template"
-version = "0.1.0"
-dependencies = [
- "frame-benchmarking",
- "frame-support",
- "frame-system",
- "parity-scale-codec",
- "scale-info",
- "sp-core",
- "sp-io",
- "sp-runtime",
-]
-
-[[package]]
 name = "pallet-parameters"
 version = "0.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -7494,6 +7480,20 @@ dependencies = [
  "staging-xcm",
  "staging-xcm-builder",
  "staging-xcm-executor",
+]
+
+[[package]]
+name = "pallet-xode-staking"
+version = "0.1.0"
+dependencies = [
+ "frame-benchmarking",
+ "frame-support",
+ "frame-system",
+ "parity-scale-codec",
+ "scale-info",
+ "sp-core",
+ "sp-io",
+ "sp-runtime",
 ]
 
 [[package]]
@@ -15388,16 +15388,14 @@ dependencies = [
  "pallet-contracts",
  "pallet-indices",
  "pallet-message-queue",
- "pallet-parachain-template",
  "pallet-session",
- "pallet-staking",
- "pallet-staking-reward-curve",
  "pallet-sudo",
  "pallet-timestamp",
  "pallet-transaction-payment",
  "pallet-transaction-payment-rpc-runtime-api",
  "pallet-treasury",
  "pallet-xcm",
+ "pallet-xode-staking",
  "parachains-common",
  "parity-scale-codec",
  "polkadot-parachain-primitives",
