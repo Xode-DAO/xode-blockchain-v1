@@ -320,8 +320,9 @@ mod runtime {
 	pub type Treasury = pallet_treasury::Pallet<Runtime>;
 
 	// Xode Staking
-	#[runtime::pallet_index(50)]
-	pub type XodeStakingPallet = pallet_xode_staking;
+	// To-do once xode-staking is fully written
+	// #[runtime::pallet_index(50)]
+	// pub type XodeStakingPallet = pallet_xode_staking;
 }
 
 #[docify::export(register_validate_block)]

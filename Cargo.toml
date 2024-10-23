@@ -121,4 +121,10 @@ pallet-indices = { version = "37.0.0", default-features = false }
 pallet-collective = { version = "37.0.0", default-features = false }
 pallet-treasury= { version = "36.0.1", default-features = false }
 
+similar-asserts = "1.1.0"
+sp-consensus-slots = { version = "0.40.0", default-features = false }
+substrate-fixed = "0.5.9"
+
 pallet-babe= { version = "37.0.0", default-features = false }
+
+#nimbus-primitives = { git = "https://github.com/Moonsong-Labs/moonkit", branch = "moonbeam-polkadot-stable2407", default-features = false }

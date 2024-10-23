@@ -323,10 +323,11 @@ impl pallet_collator_selection::Config for Runtime {
 }
 
 /// Configure the pallet xode staking in pallets/xode-staking.
-impl pallet_xode_staking::Config for Runtime {
-	type RuntimeEvent = RuntimeEvent;
-	type WeightInfo = pallet_xode_staking::weights::SubstrateWeight<Runtime>;
-}
+/// To-do once the pallet is fully written
+/// impl pallet_xode_staking::Config for Runtime {
+/// 	type RuntimeEvent = RuntimeEvent;
+/// 	type WeightInfo = pallet_xode_staking::weights::SubstrateWeight<Runtime>;
+/// }
 
 /// Xode Blockchain: Configure the pallet assets
 /// 

@@ -13,20 +13,28 @@ publish = false
 targets = ["x86_64-unknown-linux-gnu"]
 
 [dependencies]
-codec = { features = [
-	"derive",
-], workspace = true }
-scale-info = { features = [
-	"derive",
-], workspace = true }
+log.workspace = true
+serde.workspace = true
+
+# Substrate
 frame-benchmarking = { optional = true, workspace = true }
 frame-support.workspace = true
 frame-system.workspace = true
+codec = { features = ["derive",], workspace = true }
+scale-info = { features = ["derive",], workspace = true }
+sp-consensus-slots.workspace = true
 sp-runtime.workspace = true
+sp-std.workspace = true
+substrate-fixed.workspace = true
+
+#nimbus-primitives = { workspace = true }
 
 [dev-dependencies]
-sp-core = { default-features = true, workspace = true }
-sp-io = { default-features = true, workspace = true }
+pallet-balances.workspace = true
+similar-asserts.workspace = true
+sp-core.workspace = true
+sp-io.workspace = true
+sp-runtime.workspace = true
 
 [features]
 default = ["std"]
@@ -39,12 +47,12 @@ runtime-benchmarks = [
 std = [
 	"codec/std",
 	"scale-info/std",
-
 	"frame-benchmarking?/std",
 	"frame-support/std",
 	"frame-system/std",
-
 	"sp-runtime/std",
+	"sp-consensus-slots/std",
+	"sp-std/std",
 ]
 try-runtime = [
 	"frame-support/try-runtime",

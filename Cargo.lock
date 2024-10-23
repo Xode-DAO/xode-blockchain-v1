@@ -961,6 +961,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "bstr"
+version = "1.10.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "40723b8fb387abc38f4f4a37c09073622e41dd12327033091ef8950659e6dc0c"
+dependencies = [
+ "memchr",
+ "regex-automata 0.4.7",
+ "serde",
+]
+
+[[package]]
 name = "build-helper"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -7489,11 +7500,18 @@ dependencies = [
  "frame-benchmarking",
  "frame-support",
  "frame-system",
+ "log",
+ "pallet-balances",
  "parity-scale-codec",
  "scale-info",
+ "serde",
+ "similar-asserts",
+ "sp-consensus-slots",
  "sp-core",
  "sp-io",
  "sp-runtime",
+ "sp-std",
+ "substrate-fixed",
 ]
 
 [[package]]
@@ -11959,6 +11977,26 @@ dependencies = [
 ]
 
 [[package]]
+name = "similar"
+version = "2.6.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1de1d4f81173b03af4c0cbed3c898f6bff5b870e4a7f5d6f4057d62a7a4b686e"
+dependencies = [
+ "bstr",
+ "unicode-segmentation",
+]
+
+[[package]]
+name = "similar-asserts"
+version = "1.6.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cfe85670573cd6f0fa97940f26e7e6601213c3b0555246c24234131f88c5709e"
+dependencies = [
+ "console",
+ "similar",
+]
+
+[[package]]
 name = "simple-dns"
 version = "0.5.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -13242,6 +13280,17 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b285e7d183a32732fdc119f3d81b7915790191fad602b7c709ef247073c77a2e"
 
 [[package]]
+name = "substrate-fixed"
+version = "0.5.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2e83ba2b4f68f12ec6b0f55bac0a23a5bcaaf2676f1109c7a5ead6121c7f0622"
+dependencies = [
+ "parity-scale-codec",
+ "scale-info",
+ "substrate-typenum",
+]
+
+[[package]]
 name = "substrate-frame-rpc-system"
 version = "38.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -13291,6 +13340,16 @@ dependencies = [
  "sp-state-machine",
  "sp-trie",
  "trie-db",
+]
+
+[[package]]
+name = "substrate-typenum"
+version = "1.16.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f0f0091e93c2c75b233ae39424c52cb8a662c0811fb68add149e20e5d7e8a788"
+dependencies = [
+ "parity-scale-codec",
+ "scale-info",
 ]
 
 [[package]]
@@ -14120,6 +14179,12 @@ checksum = "5c5713f0fc4b5db668a2ac63cdb7bb4469d8c9fed047b1d0292cc7b0ce2ba921"
 dependencies = [
  "tinyvec",
 ]
+
+[[package]]
+name = "unicode-segmentation"
+version = "1.12.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f6ccf251212114b54433ec949fd6a7841275f9ada20dddd2f29e9ceea4501493"
 
 [[package]]
 name = "unicode-width"
