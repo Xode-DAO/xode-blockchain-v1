@@ -2347,11 +2347,13 @@ pub mod pallet {
 		}
 	}
 
-/* 	impl<T: Config> nimbus_primitives::CanAuthor<T::AccountId> for Pallet<T> {
+	/* 
+ 	impl<T: Config> nimbus_primitives::CanAuthor<T::AccountId> for Pallet<T> {
 		fn can_author(account: &T::AccountId, _slot: &u32) -> bool {
 			Self::is_selected_candidate(account)
 		}
-	} */
+	} 
+	*/
 
 	impl<T: Config> Get<Vec<T::AccountId>> for Pallet<T> {
 		fn get() -> Vec<T::AccountId> {

@@ -9,6 +9,7 @@ edition = "2021"
 members = [
     "node",
     "pallets/xode-staking",
+    "pallets/xode-consensus",
     "runtime",
 ]
 resolver = "2"
@@ -16,6 +17,7 @@ resolver = "2"
 [workspace.dependencies]
 xode-runtime = { path = "./runtime", default-features = false }
 pallet-xode-staking = { path = "./pallets/xode-staking", default-features = false }
+pallet-xode-consensus = { path = "./pallets/xode-consensus", default-features = false }
 clap = { version = "4.5.3" }
 codec = { version = "3.6.12", default-features = false, package = "parity-scale-codec" }
 color-print = { version = "0.3.4" }
@@ -127,4 +129,4 @@ substrate-fixed = "0.5.9"
 
 pallet-babe= { version = "37.0.0", default-features = false }
 
-#nimbus-primitives = { git = "https://github.com/Moonsong-Labs/moonkit", branch = "moonbeam-polkadot-stable2407", default-features = false }
+nimbus-primitives = { git = "https://github.com/Moonsong-Labs/moonkit", branch = "moonbeam-polkadot-stable2407" , default-features = false }

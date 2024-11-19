@@ -9,53 +9,43 @@ repository.workspace = true
 edition.workspace = true
 publish = false
 
-[package.metadata.docs.rs]
-targets = ["x86_64-unknown-linux-gnu"]
-
 [dependencies]
-log.workspace = true
-serde.workspace = true
+log = { workspace = true }
+serde = { workspace = true }
 
 # Substrate
-frame-benchmarking = { optional = true, workspace = true }
-frame-support.workspace = true
-frame-system.workspace = true
-codec = { features = ["derive",], workspace = true }
-scale-info = { features = ["derive",], workspace = true }
-sp-consensus-slots.workspace = true
-sp-runtime.workspace = true
-sp-std.workspace = true
-substrate-fixed.workspace = true
+frame-benchmarking = { workspace = true, optional = true }
+frame-support = { workspace = true }
+frame-system = { workspace = true }
+codec = { workspace = true, features = [ "derive" ] }
+scale-info = { workspace = true, features = [ "derive" ] }
+sp-consensus-slots = { workspace = true }
+sp-runtime = { workspace = true }
+sp-std = { workspace = true }
+substrate-fixed = { workspace = true }
 
-#nimbus-primitives = { workspace = true }
+# Nimbus
+nimbus-primitives = { workspace = true}
 
 [dev-dependencies]
-pallet-balances.workspace = true
-similar-asserts.workspace = true
-sp-core.workspace = true
-sp-io.workspace = true
-sp-runtime.workspace = true
+pallet-balances = { workspace = true, features = [ "insecure_zero_ed", "std" ] }
+similar-asserts = { workspace = true }
+sp-core = { workspace = true, features = [ "std" ] }
+sp-io = { workspace = true, features = [ "std" ] }
+sp-runtime = { workspace = true }
 
 [features]
-default = ["std"]
-runtime-benchmarks = [
-	"frame-benchmarking/runtime-benchmarks",
-	"frame-support/runtime-benchmarks",
-	"frame-system/runtime-benchmarks",
-	"sp-runtime/runtime-benchmarks",
-]
+default = [ "std" ]
 std = [
-	"codec/std",
-	"scale-info/std",
-	"frame-benchmarking?/std",
+	"frame-benchmarking/std",
 	"frame-support/std",
 	"frame-system/std",
-	"sp-runtime/std",
+	"nimbus-primitives/std",
+	"codec/std",
+	"scale-info/std",
 	"sp-consensus-slots/std",
+	"sp-runtime/std",
 	"sp-std/std",
 ]
-try-runtime = [
-	"frame-support/try-runtime",
-	"frame-system/try-runtime",
-	"sp-runtime/try-runtime",
-]
+runtime-benchmarks = [ "frame-benchmarking" ]
+try-runtime = [ "frame-support/try-runtime" ]
