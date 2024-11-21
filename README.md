@@ -8,9 +8,12 @@
 
 Xode Blockchain is consists of:
 
-* 💿 a [Node](./node/README.md) - the binary application.
-* 🧮 the [Runtime](./runtime/README.md) - the core logic of the parachain.
-* 🎨 the [Pallets](./pallets/README.md) - from which the runtime is constructed.
+* The [Node](./node/README.md) - xode-node binary application.
+* The [Runtime](./runtime/README.md) - xode-runtime WASM application.
+* The [Pallets](./pallets/README.md) - xode pallets.
+    * xode-consensus 
+    * xode-staking
+* The [Test](./zombienet/README.md) - xode test network (zombienet).
 
 ## Getting Started
 
@@ -18,16 +21,11 @@ Xode Blockchain is consists of:
 
 ### Build
 
-🔨 Use the following command to build the node without launching it:
+🔨 Use the following command to build and launch the node:
 
 ```sh
 cargo build --package xode-node --release
-```
-
-🐳 Alternatively, build the docker image:
-
-```sh
-docker build . -t xode-node
+./zombienet/zombienet-launch.sh
 ```
 
 ## Getting Help
