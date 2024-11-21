@@ -12,5 +12,13 @@
 ## Polkadot binaries
 https://github.com/paritytech/polkadot/releases
 
+## Compiling  Polkadot
+```
+git clone https://github.com/paritytech/polkadot
+cd polkadot
+git checkout release-v1.0.0
+cargo build --release
+```
+
 ## Zombienet binaries
 https://github.com/paritytech/zombienet/releases

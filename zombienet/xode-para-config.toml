@@ -4,7 +4,7 @@ timeout = 1000
 node_verifier = "None"
 
 [relaychain]
-default_command = "./bin/polkadot"
+default_command = "../../polkadot/target/release/polkadot"
 default_args = [ "-l=parachain=debug,xcm=trace" ]
 chain = "rococo-local"
 
@@ -16,24 +16,11 @@ chain = "rococo-local"
   name = "bob"
   validator = true
 
-  [[relaychain.nodes]]
-  name = "charlie"
-  validator = true
-
-  [[relaychain.nodes]]
-  name = "dave"
-  validator = true
-
 [[parachains]]
 id = 1000
 cumulus_based = true
 
   [[parachains.collators]]
   name = "xode-collator01"
-  command = "./bin/xode-node"
-  args = [ "-l=xcm=trace" ]
-
-  [[parachains.collators]]
-  name = "xode-collator02"
   command = "../target/release/xode-node"
   args = [ "-l=xcm=trace" ]

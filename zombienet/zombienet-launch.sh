@@ -1,1 +1,1 @@
-DEBUG=zombie* ./bin/zombienet-linux-x64 spawn xode-para-config.toml -p native
+DEBUG=zombie* ./bin/zombienet-macos-x64 spawn xode-para-config.toml -p native
